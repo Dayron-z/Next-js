@@ -1,0 +1,242 @@
+@import "./mixins";
+@import "./variables";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $black;
+}
+
+// Nav-bar
+.nav-bar {
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+
+    .top-nav {
+        box-shadow: 0 12px 10px -2px $light-gray-color;
+        @include flex-center;
+        justify-content: space-between;
+        padding: 0rem 24.8px;
+        font-weight: bold;
+
+        .top-center {
+            span {
+                font-size: 35px;
+            }
+        }
+
+        .top-left,
+        .top-right {
+            display: flex;
+            gap: 20px;
+            .language {
+                @include flex-center;
+                gap: 0.3125rem;
+                height: 25px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: fill;
+                }
+            }
+        }
+    }
+
+    .down-nav {
+        @include flex-center;
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            font-weight: 400;
+            div {
+                display: flex;
+                gap: 3px;
+            }
+        }
+    }
+}
+
+//Home
+.banner-container {
+    width: 100%;
+    display: flex;
+    .left-section {
+        position: relative;
+        width: 50%;
+        background-color: $light-green-color;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 3.125rem;
+        .info-left-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        h2 {
+            font-size: 80px;
+            width: min-content;
+            font-weight: 400;
+        }
+        .detail-button {
+            width: 200px;
+            height: 40px;
+            @include flex-center;
+            gap: 4px;
+            background-color: $white;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+    }
+    .right-section {
+        width: 50%;
+        background-color: $pink-select;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .circles-container {
+        display: flex;
+        position: absolute;
+        gap: 10px;
+        bottom: 40px;
+        div {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgba(116, 116, 116, 0.356);
+        }
+    }
+}
+
+.season-collection {
+    padding: 50px;
+    @include flex-center;
+    flex-direction: column;
+    background: $light-gray-color;
+    .info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            font-weight: 300;
+            font-size: 36px;
+        }
+    }
+
+    .image-collection {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        background-color: $light-gray-color;
+    }
+}
+
+.container-collection {
+    display: flex;
+    @include flex-center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    span {
+        font-weight: 400;
+        color: rgb(155, 155, 155);
+    }
+    img {
+        border-radius: 100%;
+        object-fit: cover;
+        width: 70%;
+        height: 70%;
+        margin-bottom: 40px;
+    }
+}
+
+.nav-home {
+    @include flex-center;
+    gap: 1.25rem;
+    font-size: 25px;
+}
+
+
+.best-seller {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .card-container-best-seller {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8.25rem;
+    }
+}
+
+
+
+.container-best-seller {
+    width: 350px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    .card-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .image-container {
+            height: 70%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+    .content-container{
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        background-color: $white;
+        p {
+
+            font-weight: 300;
+        }
+
+        span{
+            font-size: 12px;
+        }
+    }
+
+
+    .select-colors {
+        height: 10%;
+        display: flex;
+        background-color: $black;
+        background-color: $white;
+        gap: 10px;
+        div {
+            border: 1px solid $black; 
+            background-color: rebeccapurple;
+            border-radius: 100%;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+
